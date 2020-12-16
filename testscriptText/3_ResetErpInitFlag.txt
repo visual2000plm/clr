@@ -1,0 +1,37 @@
+
+declare @tables table
+(
+    id    int  identity,
+    Name        varchar(300),
+    Processed int 
+    
+)
+
+insert into @tables (Name,Processed)
+  SELECT name ,'0' FROM sys.Tables where type='u' and is_ms_shipped <> 1 and name not like '%sysdiagrams%'
+
+
+Declare @Id int
+declare @tableName nvarchar(300)
+declare @updateTable nvarchar(4000)
+
+While (Select Count(*) From @tables Where Processed = 0) > 0
+Begin
+    Select Top 1 @Id = Id ,@tableName= Name From @tables Where Processed = 0
+
+
+
+ select @updateTable ='update '+ @tableName +' set ExchangeRowDataERPFlag = 1 ,ExchangeRowDataERPExportDateTime=null,ExchangeRowDataPLMImportDateTime=null,ExchangeRowDataPLMPrimayKey=null,ExchangeRowDataSourceOfOriginal=''erp''';
+
+BEGIN TRY
+ exec sp_executesql @updateTable
+
+END TRY
+BEGIN CATCH
+print ERROR_MESSAGE() + ' tableName :'+  @tableName
+END CATCH
+
+    Update @tables Set Processed = 1 Where Id = @Id 
+
+End
+

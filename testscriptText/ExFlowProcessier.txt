@@ -1,0 +1,6 @@
+1: Get DataSource
+2: run runscript to get Ex-chnage tabe  structure and save strcuture to plms database
+3: mapping column between plms and  erp
+4: transfer new data
+5: need to chage setting 
+update pdmSetup set SetupValue = 'Data Source=lab-e2e;Initial Catalog=Ex_ITR;User ID=sa;Password=' where setupCode ='PLMExChangeDatabaseConnection'

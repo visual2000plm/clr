@@ -1,0 +1,15 @@
+C:\Development\PDMSqlUDF\bin\Release\PDMUDF.dll
+C:\Development\PDMSqlUDF\obj\Release\ResolveAssemblyReference.cache
+C:\Development\PDMSqlUDF\obj\Release\PDMUDF.dll
+F:\Development\PDMSqlUDF\bin\Release\PDMUDF.dll
+F:\Development\PDMSqlUDF\obj\Release\ResolveAssemblyReference.cache
+F:\Development\PDMSqlUDF\obj\Release\PDMUDF.dll
+C:\Development_Workspace\PDMSqlUDF VS2008\bin\Release\PDMUDF.dll
+C:\Development_Workspace\PDMSqlUDF VS2008\obj\Release\ResolveAssemblyReference.cache
+C:\Development_Workspace\PDMSqlUDF VS2008\obj\Release\PDMUDF.dll
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2008\bin\Release\PDMUDF.dll
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2008\obj\Release\ResolveAssemblyReference.cache
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2008\obj\Release\PDMUDF.dll
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2010MaxSize2G\bin\Release\PDMUDF.dll
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2010MaxSize2G\obj\Release\ResolveAssemblyReference.cache
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2010MaxSize2G\obj\Release\PDMUDF.dll

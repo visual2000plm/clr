@@ -1,0 +1,49 @@
+﻿//The TRUSTWORTHY database property is used to indicate whether the instance of SQL Server trusts the database and the contents within it
+//ALTER DATABASE PLMS_Devlp SET TRUSTWORTHY ON
+// Let SQL server trust the database and content
+
+//http://www.codeproject.com/Articles/21149/Invoking-a-WCF-Service-from-a-CLR-Trigger
+//-- Turn advanced options on
+//EXEC sp_configure 'show advanced options' , '1';
+//go
+//reconfigure;
+//go
+//EXEC sp_configure 'clr enabled' , '1'
+//go
+//reconfigure;
+//-- Turn advanced options back off
+//EXEC sp_configure 'show advanced options' , '0';
+//go
+
+//use custdb
+//ALTER DATABASE custdb SET TRUSTWORTHY ON
+//reconfigure
+
+// select * from sys.dm_clr_properties
+
+//select * from sys.dm_clr_appdomains
+//select * from sys.dm_clr_loaded_assemblies
+// select * from sys.dm_clr_tasks
+
+
+EXEC sp_configure 'show advanced options' , '1';
+go
+   reconfigure;
+   go
+
+   EXEC sp_configure 'clr enabled' , '1'
+   go
+   reconfigure;
+   -- Turn advanced options back off
+   EXEC sp_configure 'show advanced options' , '0';
+   go
+
+   use TestDB
+   ALTER DATABASE TestDB SET TRUSTWORTHY ON
+   reconfigure
+
+    select * from sys.dm_clr_properties
+
+   select * from sys.dm_clr_appdomains
+   select * from sys.dm_clr_loaded_assemblies
+    select * from sys.dm_clr_tasks

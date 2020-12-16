@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+    <PostConversionRemoveFromScc>
+    </PostConversionRemoveFromScc>
+    <PostConversionAddToScc>
+    </PostConversionAddToScc>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
+    <Trustworthy>True</Trustworthy>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>Database</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>PDMUDF</AssemblyName>
+    <RootNamespace>PLMCLRTools</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PermissionSet>UNSAFE</PermissionSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ConnectionString>
+    </ConnectionString>
+    <TargetFrameworkProfile />
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <Name>PDMUDF</Name>
+    <ProjectVersion>4.0</ProjectVersion>
+    <ProjectGuid>{b31d6a21-72e2-4e1e-be1b-c202ed35b051}</ProjectGuid>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <GenerateDatabaseFile>False</GenerateDatabaseFile>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <DefaultSchema>dbo</DefaultSchema>
+    <SqlServerVerification>False</SqlServerVerification>
+    <TargetLanguage>CS</TargetLanguage>
+    <AssemblyOwner>
+    </AssemblyOwner>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PLMDataRowConverter.cs" />
+    <Compile Include="PLMSpecGradingHelper.cs" />
+    <Compile Include="SysDefinBlockHelper.cs" />
+    <Compile Include="DataTableExtension.cs" />
+    <Compile Include="PLMConstantString.cs" />
+    <Compile Include="DataTableCreateSQLTable.cs" />
+    <Compile Include="DataAcessHelper.cs" />
+    <Compile Include="DataTableUtility.cs" />
+    <Compile Include="ExcelExportUtility.cs" />
+    <Compile Include="PLMDWSynchronizeReferenceBlockToTabGridDW.cs" />
+    <Compile Include="PLMSDWScriptGenerator.cs" />
+    <Compile Include="PLMSEntityClrBL.cs" />
+    <Compile Include="PLMSDatabaseVersionArchive.cs" />
+    <Compile Include="PLMSTechPackStoredProcedures.cs" />
+    <Compile Include="CLROutput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PLMSClrDto.cs" />
+    <Compile Include="PLMSWSCall.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlUserDefinedAggregate.cs" />
+    <Compile Include="PLMSDWStoredProcedures.cs" />
+    <Compile Include="TabGridEntityStoredProcedureHelper.cs" />
+    <Content Include="testscriptText\CLRServerSetting.txt" />
+    <Compile Include="UserDefinedFunctions.cs" />
+    <Compile Include="PdmCacheManager.cs" />
+    <Compile Include="ClrLib\UserDefineDto\PdmGridMetaColumnDto.cs" />
+    <Compile Include="PLMSReferenceValueRetrieveBL.cs" />
+    <Compile Include="PLMSControlTypeValueConverter.cs" />
+    <Compile Include="ClrLib\UserDefineDto\PdmBlockDto.cs" />
+    <Compile Include="ClrLib\UserDefineDto\PdmGridDto.cs" />
+    <Compile Include="ClrLib\UserDefineDto\SimpleGridProductRow.cs" />
+    <Compile Include="PLMUtilityStorcProcedures.cs" />
+    <Compile Include="Data_Ex\PLMSUserDefineTableExchagne.cs" />
+    <Compile Include="Data_Ex\PLMSysTableExchnage.cs" />
+    <Compile Include="ClrLib\UserDefineDto\PdmEntityBlClrDto.cs" />
+    <Compile Include="ClrLib\UserDefineDto\PdmTabConverter.cs" />
+    <Compile Include="Enum.cs" />
+    <Compile Include="GridRegister.cs" />
+    <Compile Include="BlockRegister.cs" />
+    <Compile Include="PomHelper.cs" />
+    <Compile Include="PLMSGetGridValueHeler.cs" />
+    <Compile Include="PLMSGetGridSpecialColumn.cs" />
+    <Compile Include="PLMSSetDepdentMasterEntityAndLookup.cs" />
+    <Compile Include="HtmlToPlainText.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmBlockDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmBlockFormulaDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmBlockSubItemDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmBlockSubitemValidatorDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmBlockSubItemValueDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmBlqueryDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmDwrequireTabAndGridDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmEntityBlDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmEntityEnumValueDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmEntityMasterChildValueDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmErptableColumnMappingDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmErptableMappingDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmGridDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmGridIdentityDisplayColumnDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmGridMetaColumnAggFunctionDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmGridMetaColumnDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmMassUpdateViewDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmMassUpdateViewFieldDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmMassUpdateViewMemberDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmReferenceViewColumnDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmReferenceViewConfigurationDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmReferenceViewDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmReferenceViewMemberDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmReportPublishSecurityDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmRgbcolorReferenceTypeDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSearchTemplateDcuDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSearchTemplateDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSearchTemplateReferenceViewDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSecurityDivUserGroupMemberDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSecurityGroupMemberDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSecurityGroupUserRightDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSecurityPermissionDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSecurityRegDomainDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSecurityRegDomainListMenuDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSecurityUserContactDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSecurityUserGroupDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSecurityUserGroupPermissionDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmSetupDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTabBlockCaculationFlowDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTabBlockDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTabBlockSubItemExtraInfoDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTabDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTabGridMetaColumnDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTableTimestampDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTemplateDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTemplateReportPrintDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTemplateTabDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTemplateTabLibReferenceSettingDetailDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTemplateTabLibReferenceSettingDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmTimeZoneInfoDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmUserDefineEntityColumnDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmUserDefineEntityRowDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmUserDefineEntityRowValueDto.cs" />
+    <Compile Include="ClrLib\ClrDto\PdmV2kBodyPartDto.cs" />
+    <Compile Include="ClrLib\ClrDto\TblDimensionDetailDto.cs" />
+    <Compile Include="ClrLib\ClrDto\TblDimensionDto.cs" />
+    <Compile Include="ClrLib\ClrDto\TblSizeRunDto.cs" />
+    <Compile Include="ClrLib\ClrDto\TblSizeRunRotateDto.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmBlockDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmBlockFormulaDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmBlockSubItemDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmBlockSubitemValidatorDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmBlockSubItemValueDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmBlqueryDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmDwrequireTabAndGridDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmEntityBlDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmEntityEnumValueDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmEntityMasterChildValueDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmErptableColumnMappingDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmErptableMappingDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmGridDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmGridIdentityDisplayColumnDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmGridMetaColumnAggFunctionDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmGridMetaColumnDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmMassUpdateViewDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmMassUpdateViewFieldDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmMassUpdateViewMemberDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmReferenceViewColumnDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmReferenceViewConfigurationDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmReferenceViewDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmReferenceViewMemberDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmReportPublishSecurityDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmRgbcolorReferenceTypeDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSearchTemplateDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSearchTemplateDcuDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSearchTemplateReferenceViewDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSecurityDivUserGroupMemberDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSecurityGroupMemberDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSecurityGroupUserRightDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSecurityPermissionDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSecurityRegDomainDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSecurityRegDomainListMenuDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSecurityUserContactDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSecurityUserGroupDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSecurityUserGroupPermissionDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmSetupDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTabBlockCaculationFlowDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTabBlockDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTabBlockSubItemExtraInfoDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTabDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTabGridMetaColumnDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTableTimestampDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTemplateDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTemplateReportPrintDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTemplateTabDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTemplateTabLibReferenceSettingDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTemplateTabLibReferenceSettingDetailDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmTimeZoneInfoDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmUserDefineEntityColumnDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmUserDefineEntityRowDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmUserDefineEntityRowValueDal.cs" />
+    <Compile Include="ClrLib\ClrDal\PdmV2kBodyPartDal.cs" />
+    <Compile Include="ClrLib\ClrDal\TblDimensionDal.cs" />
+    <Compile Include="ClrLib\ClrDal\TblDimensionDetailDal.cs" />
+    <Compile Include="ClrLib\ClrDal\TblSizeRunDal.cs" />
+    <Compile Include="ClrLib\ClrDal\TblSizeRunRotateDal.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmBlockConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmBlockFormulaConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmBlockSubItemConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmBlockSubitemValidatorConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmBlockSubItemValueConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmBlqueryConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmDwrequireTabAndGridConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmEntityBlConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmEntityEnumValueConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmEntityMasterChildValueConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmErptableColumnMappingConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmErptableMappingConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmGridConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmGridIdentityDisplayColumnConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmGridMetaColumnAggFunctionConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmGridMetaColumnConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmMassUpdateViewConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmMassUpdateViewFieldConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmMassUpdateViewMemberConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmReferenceViewColumnConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmReferenceViewConfigurationConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmReferenceViewConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmReferenceViewMemberConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmReportPublishSecurityConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmRgbcolorReferenceTypeConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSearchTemplateConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSearchTemplateDcuConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSearchTemplateReferenceViewConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSecurityDivUserGroupMemberConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSecurityGroupMemberConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSecurityGroupUserRightConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSecurityPermissionConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSecurityRegDomainConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSecurityRegDomainListMenuConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSecurityUserContactConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSecurityUserGroupConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSecurityUserGroupPermissionConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmSetupConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTabBlockCaculationFlowConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTabBlockConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTabBlockSubItemExtraInfoConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTabConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTabGridMetaColumnConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTableTimestampConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTemplateConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTemplateReportPrintConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTemplateTabConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTemplateTabLibReferenceSettingConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTemplateTabLibReferenceSettingDetailConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmTimeZoneInfoConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmUserDefineEntityColumnConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmUserDefineEntityRowConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmUserDefineEntityRowValueConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\PdmV2kBodyPartConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\TblDimensionConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\TblDimensionDetailConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\TblSizeRunConverter.cs" />
+    <Compile Include="ClrLib\ClrConverter\TblSizeRunRotateConverter.cs" />
+    <Compile Include="StringUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PdmCacheEntityLookupItem.cs" />
+    <Compile Include="PLMSCacheSystemTest.cs" />
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Content Include="testscriptText\CommonuserDbScript.txt" />
+    <Content Include="Test Scripts\1-EntityValueRetreiveFunction.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="testscriptText\1_RenameAllTableScript.txt" />
+    <Content Include="testscriptText\2_AddFlagControlColumn.txt" />
+    <Content Include="testscriptText\3_ResetErpInitFlag.txt" />
+    <Content Include="testscriptText\0_DropAlltrgier.txt" />
+    <Content Include="testscriptText\RvertBackTotheorigianlStrcuture_Table_Ex_PLM_Import.txt" />
+    <Content Include="testscriptText\ExFlowProcessier.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Test Scripts\3-CLRUDFFunction_4.sql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="-09-03-CLRUDFFunction_4.sql" />
+    <None Include="app.config" />
+    <Content Include="Test Scripts\Test1.txt" />
+    <None Include="Test Scripts\2-ComplexAndSimpleValueView.sql" />
+    <None Include="PDMUDF.publish.xml" />
+    <None Include="SRVSpiderNet35.publish.publish.xml" />
+    <None Include="SrvScorpionklum_new_plmsPDMUDF.publish.publish.xml" />
+    <Content Include="UserDefineEx_TestScript\1_RenameAllTableScript.txt" />
+    <Content Include="UserDefineEx_TestScript\2_AddFlagControlColumn.txt" />
+    <Content Include="UserDefineEx_TestScript\CleanUserDefineentityScript.txt" />
+    <None Include="lab-vmssrg.publish.xml" />
+    <None Include="lab2-vms_osc.publish.xml" />
+    <Content Include="ReleaseNotes.txt" />
+    <None Include="KrplmPDMUDF.publish.xml" />
+    <None Include="srv-spiderPDMUDF.publish.xml" />
+    <None Include="PDMUD_ootbPlms.publish.xml" />
+    <None Include="PDMUDFDevlp_plms.publish.xml" />
+    <None Include="HybridApparel_Plms.publish.xml" />
+    <None Include="lab-plmsSql2008publish.xml" />
+    <None Include="dev-xianghaoSql2008publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="testscriptText\" />
+    <Folder Include="Test Scripts\" />
+    <Folder Include="ClrLib" />
+    <Folder Include="ClrLib\ClrDal" />
+    <Folder Include="ClrLib\ClrConverter" />
+    <Folder Include="ClrLib\UserDefineDto" />
+    <Folder Include="UserDefineEx_TestScript" />
+    <Folder Include="Data_Ex" />
+    <Folder Include="ClrLib\ClrDto" />
+  </ItemGroup>
+</Project>

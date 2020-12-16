@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_ConversionReport_Files/ConversionReport.xslt'?>
+<UpgradeLog>
+  <Properties>
+    <Property Name="Project" Value="PDMUDF" />
+    <Property Name="Project File" Value="C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\PDMUDF.csproj" />
+    <Property Name="Date" Value="Tuesday, February 12, 2013" />
+    <Property Name="Time" Value="12:36 PM" />
+  </Properties>
+  <Event ErrorLevel="0" Project="C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\PDMUDF.csproj" Source="..\PDMUDF.csproj" Description="Project was successfully converted: 'C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\PDMUDF.csproj' to 'C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\PDMUDF.sqlproj'" />
+  <Event ErrorLevel="3" Project="C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\PDMUDF.csproj" Source="..\PDMUDF.csproj" Description="Converted" />
+</UpgradeLog>

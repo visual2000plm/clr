@@ -1,0 +1,29 @@
+C:\Development\PDMSqlUDF\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\PDMSqlUDF\bin\Debug\PDMUDF.dll
+C:\Development\PDMSqlUDF\bin\Debug\PDMUDF.pdb
+C:\Development\PDMSqlUDF\obj\Debug\PDMUDF.dll
+C:\Development\PDMSqlUDF\obj\Debug\PDMUDF.pdb
+C:\Development_Workspace\PDMSqlUDF VS2008\bin\Debug\PDMUDF.dll
+C:\Development_Workspace\PDMSqlUDF VS2008\bin\Debug\PDMUDF.pdb
+C:\Development_Workspace\PDMSqlUDF VS2008\obj\Debug\ResolveAssemblyReference.cache
+C:\Development_Workspace\PDMSqlUDF VS2008\obj\Debug\PDMUDF.dll
+C:\Development_Workspace\PDMSqlUDF VS2008\obj\Debug\PDMUDF.pdb
+D:\Development_Workspace\PDMSqlUDF VS2008\bin\Debug\PDMUDF.dll
+D:\Development_Workspace\PDMSqlUDF VS2008\bin\Debug\PDMUDF.pdb
+D:\Development_Workspace\PDMSqlUDF VS2008\obj\Debug\ResolveAssemblyReference.cache
+D:\Development_Workspace\PDMSqlUDF VS2008\obj\Debug\PDMUDF.dll
+D:\Development_Workspace\PDMSqlUDF VS2008\obj\Debug\PDMUDF.pdb
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2008\obj\Debug\ResolveAssemblyReference.cache
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2008\obj\Debug\PDMUDF.dll
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2008\obj\Debug\PDMUDF.pdb
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2008\bin\Debug\PDMUDF.dll
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2008\bin\Debug\PDMUDF.pdb
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2010MaxSize2G\bin\Debug\PDMUDF.dll
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2010MaxSize2G\bin\Debug\PDMUDF.pdb
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2010MaxSize2G\obj\Debug\ResolveAssemblyReference.cache
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2010MaxSize2G\obj\Debug\PDMUDF.dll
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2010MaxSize2G\obj\Debug\PDMUDF.pdb
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2010MaxSize2G\bin\Debug\PDMUDF.dll.config
+C:\Development_Workspace\PLMS Project\PDMSCLRVS2010MaxSize2G\bin\Debug\System.ServiceModel.dll
+C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\obj\Debug\PDMUDF.dll
+C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\obj\Debug\PDMUDF.pdb

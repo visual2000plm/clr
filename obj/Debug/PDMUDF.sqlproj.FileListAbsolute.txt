@@ -1,0 +1,7 @@
+C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\bin\Debug\PDMUDF.dacpac
+C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\bin\Debug\PDMUDF.dll.config
+C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\bin\Debug\PDMUDF.dll
+C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\bin\Debug\PDMUDF.pdb
+C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\bin\Debug\System.ServiceModel.dll
+C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\obj\Debug\PDMUDF.dll
+C:\Development_Workspace\PLMS Project\ConvertPDMSCLRVS2010MaxSize2G\obj\Debug\PDMUDF.pdb

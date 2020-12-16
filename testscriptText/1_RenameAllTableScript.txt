@@ -1,0 +1,37 @@
+
+declare @tables table
+(
+    id    int  identity,
+    Name        varchar(300),
+    Processed int 
+    
+)
+insert into @tables (Name,Processed)
+  SELECT name ,'0' FROM sys.Tables where type='u' and is_ms_shipped <> 1 and name not like '%sysdiagrams%'
+
+
+Declare @Id int
+declare @tableName nvarchar(300)
+declare @NewTableName nvarchar(4000)
+
+While (Select Count(*) From @tables Where Processed = 0) > 0
+Begin
+    Select Top 1 @Id = Id ,@tableName= Name From @tables Where Processed = 0
+
+
+
+select @NewTableName = 'EX_PLM_ERP_'+@tableName
+   
+  --print @NewTableName
+BEGIN TRY
+ exec  sp_rename @tableName ,@NewTableName
+
+END TRY
+BEGIN CATCH
+print ERROR_MESSAGE()
+END CATCH
+
+    Update @tables Set Processed = 1 Where Id = @Id 
+
+End
+

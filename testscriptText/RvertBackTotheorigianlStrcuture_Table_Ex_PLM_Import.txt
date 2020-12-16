@@ -1,0 +1,59 @@
+declare @tables table
+(
+    id    int  identity,
+    Name        varchar(300),
+    Processed int 
+    
+)
+insert into @tables (Name,Processed)
+  SELECT name ,'0' FROM sys.Tables where type='u' and is_ms_shipped <> 1 and name not like '%sysdiagrams%'
+
+
+Declare @Id int
+declare @tableName nvarchar(300)
+declare @NewTableName nvarchar(4000)
+
+While (Select Count(*) From @tables Where Processed = 0) > 0
+Begin
+    Select Top 1 @Id = Id ,@tableName= Name From @tables Where Processed = 0
+
+--set path = replace(path, 'oldstring', 'newstring')
+
+select @NewTableName = REPLACE(  @tableName,'EX_PLM_ERP_','')
+
+--select @NewTableName = 'EX_PLM_Import_'+@tableName
+   
+  --print @NewTableName
+BEGIN TRY
+ exec  sp_rename @tableName ,@NewTableName
+
+END TRY  
+BEGIN CATCH
+print ERROR_MESSAGE()
+END CATCH
+
+    Update @tables Set Processed = 1 Where Id = @Id 
+
+End
+
+-------------- Remove ExchangeRowDataERPFlag ,ExchangeRowDataPLMFlag,ExchangeRowDataERPExportDateTime,ExchangeRowDataPLMImportDateTime,ExchangeRowDataSourceOfOriginal
+
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataERPFlag'')) IS not  NULL BEGIN ALTER TABLE ? drop column ExchangeRowDataERPFlag  end'
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataPLMFlag'')) IS not NULL BEGIN ALTER TABLE ? drop column ExchangeRowDataPLMFlag  end'
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataERPExportDateTime'')) IS not  NULL BEGIN ALTER TABLE ? drop column ExchangeRowDataERPExportDateTime  end'
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataPLMImportDateTime'')) IS not  NULL BEGIN ALTER TABLE ? drop column ExchangeRowDataPLMImportDateTime  end'
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataPLMPrimayKey'')) IS not NULL BEGIN ALTER TABLE ? drop column ExchangeRowDataPLMPrimayKey  end'
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataSourceOfOriginal'')) IS not NULL BEGIN ALTER TABLE ? drop column ExchangeRowDataSourceOfOriginal  end'
+
+
+
+
+---------------------- clear PLM Ex-table
+
+
+--select * from pdmRGBColor
+--delete  pdmRGBColor where RGBColorID > 134794
+--select  * from tblSizeRun order by SizeRunId
+--select  * from tblSizeRun where SizeRunId > 349
+--delete                 tblSizeRunRotate   where SizeRunId >349
+--delete                 tblSizeRun  where SizeRunId > 3

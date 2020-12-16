@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="PLM CLR SqlServer">
+</Property><Property Name="Solution File" Value="C:\Development_Workspace\PLMS Project\PDMSCLRVS2010MaxSize2G\PLM CLR SqlServer.sln">
+</Property><Property Name="Date" Value="Tuesday, November 13, 2012">
+</Property><Property Name="Time" Value="18:07 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="PDMUDF" Source="PDMUDF.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PDMUDF" Source="PDMUDF.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="PLM CLR SqlServer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="PLM CLR SqlServer.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PDMUDF" Source="PDMUDF.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

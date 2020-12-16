@@ -1,0 +1,5 @@
+C:\PdmTransfer\KRDataExchange\TryExchangeToPDMWithDeploment\SqlServerProject1\bin\Debug\SqlServerProject1.dll
+C:\PdmTransfer\KRDataExchange\TryExchangeToPDMWithDeploment\SqlServerProject1\bin\Debug\SqlServerProject1.pdb
+C:\PdmTransfer\KRDataExchange\TryExchangeToPDMWithDeploment\SqlServerProject1\obj\Debug\ResolveAssemblyReference.cache
+C:\PdmTransfer\KRDataExchange\TryExchangeToPDMWithDeploment\SqlServerProject1\obj\Debug\SqlServerProject1.dll
+C:\PdmTransfer\KRDataExchange\TryExchangeToPDMWithDeploment\SqlServerProject1\obj\Debug\SqlServerProject1.pdb

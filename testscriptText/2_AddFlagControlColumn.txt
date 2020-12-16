@@ -1,0 +1,7 @@
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataERPFlag'')) IS NULL BEGIN ALTER TABLE ? ADD ExchangeRowDataERPFlag int NULL end'
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataPLMFlag'')) IS NULL BEGIN ALTER TABLE ? ADD ExchangeRowDataPLMFlag int NULL end'
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataERPExportDateTime'')) IS NULL BEGIN ALTER TABLE ? ADD ExchangeRowDataERPExportDateTime datetime NULL end'
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataPLMImportDateTime'')) IS NULL BEGIN ALTER TABLE ? ADD ExchangeRowDataPLMImportDateTime datetime NULL end'
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataPLMPrimayKey'')) IS NULL BEGIN ALTER TABLE ? ADD ExchangeRowDataPLMPrimayKey varchar(100) end'
+exec sp_msforeachtable 'IF(COL_LENGTH(''?'', ''ExchangeRowDataSourceOfOriginal'')) IS NULL BEGIN ALTER TABLE ? ADD ExchangeRowDataSourceOfOriginal varchar(100) end'
+

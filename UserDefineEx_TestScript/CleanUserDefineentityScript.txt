@@ -1,0 +1,11 @@
+delete  from pdmEntity where IsImport =1 and EntityID > 3000  and  EntityType = 5
+delete from pdmEntity where IsImport =1 and EntityID > 3000  and  EntityType = 4
+
+select  *  from pdmEntity where IsImport =1 and EntityID > 3000  and  EntityType = 4
+select  *  from pdmEntity where IsImport =1 and EntityID > 3000  and  EntityType = 5
+update dbo.pdmTemplateTabLibReferenceSetting set EntityID = null where EntityID=17346.
+
+Data Source=dev-sean;Initial Catalog=sample;User ID=sa;Password=sa1234
+
+--update pdmsetup set SetupValue='Data Source=lab-e2e;Initial Catalog=EX_KRPLM_Stage;User ID=sa;Password=v2ksa' where setupCode ='PLMExChangeDatabaseConnection'
+update pdmsetup set SetupValue='Data Source=lab-e2e;Initial Catalog=EX_KRPLM_Stage;User ID=sa;Password=v2ksa' where setupCode ='PLMExChangeDatabaseConnection'

@@ -1,0 +1,4 @@
+﻿2014-10-20:
+fixed :
+But when extracting the data using Gettab, 4153, 12313 (Header tab and PDP Test product) with the composition set at 'Bamboo (derived viscose) 79%, Polyamide 20%, Elastane 1% the system 
+dynamic query truncate the display chracter length 

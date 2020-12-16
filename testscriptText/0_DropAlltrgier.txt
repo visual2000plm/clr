@@ -1,0 +1,26 @@
+DECLARE @SqlCmd nVARCHAR(4000)
+declare @Trig sysname
+declare @owner sysname
+declare @uid int
+
+DECLARE TGCursor CURSOR FOR
+SELECT name, uid FROM sysobjects WHERE type = 'TR'
+OPEN TGCursor
+FETCH next FROM TGCursor INTO @Trig, @uid
+WHILE @@FETCH_STATUS = 0
+BEGIN
+
+set @SQLCmd = 'drop trigger [' + user_name(@uid) + '].[' + @Trig + ']'
+
+exec sp_executesql @SQLCmd
+
+print 'for testing!'
+print ''
+print @SQLCmd
+
+
+FETCH next FROM TGCursor INTO @Trig, @uid
+END
+CLOSE TGCursor
+DEALLOCATE TGCursor
+

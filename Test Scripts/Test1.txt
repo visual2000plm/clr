@@ -1,0 +1,95 @@
+﻿
+----------- step1: DataSource level Data intergration -------------- Synrolzation 
+
+
+Data Exchange implmentation steps:
+step1: Select all Table from Ex-change Table
+
+    // need to exclude two columns  'sysdiagrams' ,'dtproperties'
+    SELECT * FROM sys.Tables where  name not in ( 'sysdiagrams' ,'dtproperties')
+step2:  make decision which table needs to map System define table or userDefine table and populate 
+in PLMS, only need to mapping Clor,Size, Dimentions for system Defein Table, the rest we can use Userdefine table
+save 
+[dbo].[pdmERPTableMapping](
+	[MappingID] [int] IDENTITY(1,1) NOT NULL,
+	[PLMTableName] [nvarchar](500) NOT NULL,
+	[PLMPrimaryKeyColumn] [nvarchar](500) NOT NULL,
+	[PLMLogicalUniqueColumn] [nvarchar](500) NULL,
+	[EXTableName] [nvarchar](500) NOT NULL,
+	[EXPrimaryKeyColumn] [nvarchar](500) NOT NULL,
+	[EXLogicalUniqueColumn] [nvarchar](500) NULL,
+	[EXStartRootPKIDUsedByPLM] [int] NULL,
+	[EXChangeMode] [int] NULL,
+	[LastReadPLMTableTimeStamp] [varbinary](8) NULL,
+	[LastReadExchangeTableTimeStamp] [varbinary](8) NULL,
+	[ExchangeTableTimeStampColumnName] [nvarchar](100) NULL,
+	[PlmTableTimeStampColumnName] [nvarchar](100) NULL,
+	[UserDefineEntityID] [int] NULL,
+	[IsMappingToUserDefineEntity] [bit] NULL
+
+step3: For UserDefine--> we can use "PLMSCreateUserDefineEntityFromExChangeTable" to Create User Define Entity strcuture  ( not transfer data)
+each entityName with Prefix "EX_PLM_ERP_" + tableName
+
+
+
+step4: For systemDefine--> need to  manlly configure Table name /and Column mappings
+
+
+Step5: Inport User define Intitial Data from Ex-change table and update Ex_change timeStamp( lastModified timestamp) 
+
+
+Step6: Inport Systemdefine  Intitial Data from Ex-change table and update Ex_change timeStamp( lastModified timestamp) 
+
+
+
+
+
+
+
+
+---------------------
+step2: Push PLM prodct info to ERP
+// need to call PLMS Store Proc
+exec dbo.GetTab 1,140
+exec dbo.GetGrid  1,17,140
+
+---------- need to mapp  plm "Erp requirmed tab" to ERP Product  ( need DataSource id translate
+
+------------- need to map PLM grid to ERP Product -related  items ( for example: productColr) ( need DataSource id translate)
+
+---------- call ERP logical to push Data to ERP system
+
+
+------------------- Data source level intergration  procees // push/pusll
+
+pdmERPTableMapping
+
+    [MappingID] [int] IDENTITY(1,1) NOT NULL,
+	[PLMTableName] [nvarchar](500) NOT NULL,
+	[PLMPrimaryKeyColumn] [nvarchar](500) NOT NULL,
+	[PLMLogicalUniqueColumn] [nvarchar](500) NULL,
+	[EXTableName] [nvarchar](500) NOT NULL,
+	[EXPrimaryKeyColumn] [nvarchar](500) NOT NULL,
+	[EXLogicalUniqueColumn] [nvarchar](500) NULL,
+	[EXStartRootPKIDUsedByPLM] [int] NULL,
+	[EXChangeMode] [int]  ---------- OneWay --  PLM only pull from  Exchange Table,   PLM Push to _Exchange/ or pull from  ERP
+	[LastReadPLMTableTimeStamp] [varbinary](8) NULL,
+	[LastReadExchangeTableTimeStamp] [varbinary](8) NULL,
+
+------------------
+
+command.CommandText = "GetTimestampBack_Sproc";
+command.CommandType = CommandType.StoredProcedure;
+command.Parameters.AddWithValue("@ID", 42);
+SqlParameter p =
+    command.Parameters.Add("@TimestampCol", SqlDbType.Timestamp);
+p.Direction = ParameterDirection.Output;
+
+command.ExecuteNonQuery();
+byte[] timestampValue = (byte[]) p.Value;
+
+//Now write the value to the Console window
+Console.Write("0x");
+foreach (Byte b in timestampValue)
+    Console.Write(b.ToString("X2"));
+Console.WriteLine();

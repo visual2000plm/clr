@@ -1,0 +1,33 @@
+---- (set on ) it means  let client control ID, 
+SET IDENTITY_INSERT dbo.TestidentityColumn  ON 
+insert into  TestidentityColumn(Id,name)
+values(90000,'name12')
+
+
+
+-------- disalbe idenity_insert off
+SET IDENTITY_INSERT dbo.TestidentityColumn  off
+--- let server control Id
+
+
+
+select * from dbo.TestidentityColumn
+
+
+
+insert into  TestidentityColumn(name)
+values('name180')
+
+-- check if a table has identiy or not
+SELECT   OBJECT_NAME(OBJECT_ID) AS TABLENAME, 
+             NAME AS COLUMNNAME, 
+             SEED_VALUE, 
+             INCREMENT_VALUE, 
+             LAST_VALUE, 
+             IS_NOT_FOR_REPLICATION 
+    FROM     SYS.IDENTITY_COLUMNS 
+    WHERE OBJECT_NAME(OBJECT_ID) = 'TestidentityColumn'
+  
+  -- set table identity--
+    
+    DBCC CHECKIDENT (TestidentityColumn, reseed, 34)

@@ -1,0 +1,102 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       [PDMUDF] (Assembly)
+     Create
+       [PDMUDF] (Assembly)
+       [dbo].[GetTabExternalMappingValue] (Procedure)
+
+** Supporting actions
+     Drop
+       [dbo].[Concatenate] (Aggregate)
+       [dbo].[ConcatenateWithSemicolon] (Aggregate)
+       [dbo].[DistinctConcatenateWithSemicolon] (Aggregate)
+       [dbo].[DistinctCount] (Aggregate)
+       [dbo].[FirstStringIsNotNull] (Aggregate)
+       [dbo].[FirstValue] (Aggregate)
+       [dbo].[ConvertCentimeterToInch] (Function)
+       [dbo].[ConvertUTCToClientDateTime] (Function)
+       [dbo].[ConvertValueTextToDateTime] (Function)
+       [dbo].[ConvertValueTextToDecimal] (Function)
+       [dbo].[ConvertValueTextToInt] (Function)
+       [dbo].[ConvertValueTextToShortDate] (Function)
+       [dbo].[RemoveString] (Function)
+       [dbo].[PLMDW_ReCreateTabSchemeToDWTable] (Procedure)
+       [dbo].[PLMDW_RefreshALLUserDefineTableToDWTable] (Procedure)
+       [dbo].[PLMDW_RefreshGridDataToDWTable] (Procedure)
+       [dbo].[PLMDW_RefreshTabDataToDWTable] (Procedure)
+       [dbo].[PLMDW_SynchronizeUserDefineTableToDW] (Procedure)
+       [dbo].[RefreshPdmGridProductValuedw] (Procedure)
+       [dbo].[RestartClr] (Procedure)
+       [dbo].[SplitStringToMutipleColumn] (Procedure)
+       [dbo].[GetGridExternalMappingValue] (Procedure)
+       [dbo].[GetGradingSizeValue] (Procedure)
+       [dbo].[GetGridExternalColumnValue] (Procedure)
+       [dbo].[GetGridWithTimeZone] (Procedure)
+       [dbo].[GetGridWithValueIDWithTimeZone] (Procedure)
+       [dbo].[GetGridWithValueIDWithTimeZoneWithColumnName] (Procedure)
+       [dbo].[GetMergeBlockPrintGrid] (Procedure)
+       [dbo].[GetRichText] (Procedure)
+       [dbo].[GetSpecQcSize] (Procedure)
+       [dbo].[GetSpecSize] (Procedure)
+       [dbo].[GetTabWithTimeZone] (Procedure)
+       [dbo].[GetTabWithValueIDWithTimeZone] (Procedure)
+       [dbo].[GetUserPrintGrid] (Procedure)
+       [dbo].[PLMDW_CreateTabGridDWTableSnapshot] (Procedure)
+       [dbo].[PLMDW_CreateTable] (Procedure)
+       [dbo].[PLMDW_CreateUserDefineTable] (Procedure)
+       [dbo].[PLMDW_ReCreateGridSchemeToDWTable] (Procedure)
+     Create
+       [dbo].[Concatenate] (Aggregate)
+       [dbo].[ConcatenateWithSemicolon] (Aggregate)
+       [dbo].[DistinctConcatenateWithSemicolon] (Aggregate)
+       [dbo].[DistinctCount] (Aggregate)
+       [dbo].[FirstStringIsNotNull] (Aggregate)
+       [dbo].[FirstValue] (Aggregate)
+       [dbo].[ConvertCentimeterToInch] (Function)
+       [dbo].[ConvertUTCToClientDateTime] (Function)
+       [dbo].[ConvertValueTextToDateTime] (Function)
+       [dbo].[ConvertValueTextToDecimal] (Function)
+       [dbo].[ConvertValueTextToInt] (Function)
+       [dbo].[ConvertValueTextToShortDate] (Function)
+       [dbo].[RemoveString] (Function)
+       [dbo].[PLMDW_ReCreateTabSchemeToDWTable] (Procedure)
+       [dbo].[PLMDW_RefreshALLUserDefineTableToDWTable] (Procedure)
+       [dbo].[PLMDW_RefreshGridDataToDWTable] (Procedure)
+       [dbo].[PLMDW_RefreshTabDataToDWTable] (Procedure)
+       [dbo].[PLMDW_SynchronizeUserDefineTableToDW] (Procedure)
+       [dbo].[RefreshPdmGridProductValuedw] (Procedure)
+       [dbo].[RestartClr] (Procedure)
+       [dbo].[SplitStringToMutipleColumn] (Procedure)
+       [dbo].[GetGridExternalMappingValue] (Procedure)
+       [dbo].[GetGradingSizeValue] (Procedure)
+       [dbo].[GetGridExternalColumnValue] (Procedure)
+       [dbo].[GetGridWithTimeZone] (Procedure)
+       [dbo].[GetGridWithValueIDWithTimeZone] (Procedure)
+       [dbo].[GetGridWithValueIDWithTimeZoneWithColumnName] (Procedure)
+       [dbo].[GetMergeBlockPrintGrid] (Procedure)
+       [dbo].[GetRichText] (Procedure)
+       [dbo].[GetSpecQcSize] (Procedure)
+       [dbo].[GetSpecSize] (Procedure)
+       [dbo].[GetTabWithTimeZone] (Procedure)
+       [dbo].[GetTabWithValueIDWithTimeZone] (Procedure)
+       [dbo].[GetUserPrintGrid] (Procedure)
+       [dbo].[PLMDW_CreateTabGridDWTableSnapshot] (Procedure)
+       [dbo].[PLMDW_CreateTable] (Procedure)
+       [dbo].[PLMDW_CreateUserDefineTable] (Procedure)
+       [dbo].[PLMDW_ReCreateGridSchemeToDWTable] (Procedure)
+
+If this deployment is executed, changes to [dbo].[GetGridWithTimeZone] might introduce run-time errors in [dbo].[GetGrid].
+If this deployment is executed, changes to [dbo].[GetGridWithValueIDWithTimeZone] might introduce run-time errors in [dbo].[GetGridWithValueID].
+If this deployment is executed, changes to [dbo].[GetTabWithTimeZone] might introduce run-time errors in [dbo].[GetTab].
+If this deployment is executed, changes to [dbo].[GetTabWithValueIDWithTimeZone] might introduce run-time errors in [dbo].[GetTabWithValueID].
+
